@@ -1,0 +1,100 @@
+:root {
+    --bg-color: #F0F4F8;      
+    --text-color: #1B365D;     
+    --card-bg: #FFFFFF;        
+    --score-color: #D4AF37;    
+    --btn-bg: #FFFFFF;
+    --btn-border: #60C1E5;
+    --success-color: #4CAF50;
+    --error-color: #E74C3C;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.quiz-container {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.score-board {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1d3557;
+}
+
+#question {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid var(--btn-border);
+    background: var(--btn-bg);
+    color: var(--btn-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--btn-border);
+    color: var(--card-bg);
+}
+
+.correct {
+    background-color: var(--success-color) !important;
+    color: var(--card-bg) !important;
+    border-color: var(--success-color) !important;
+}
+
+.wrong {
+    background-color: var(--error-color) !important;
+    color: var(--card-bg) !important;
+    border-color: var(--error-color) !important;
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 15px;
+    }
+    #question {
+        font-size: 24px; /* سوال یکم کوچیک‌تر میشه که جا بشه */
+    }
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
